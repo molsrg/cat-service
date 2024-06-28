@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danil\\RiderProjects\\CatImageService\\CatImageService\\CatImageService.csproj": {}
+    "C:\\Users\\Sergey\\Documents\\GitHub\\cat-service\\CatImageService\\CatImageService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danil\\RiderProjects\\CatImageService\\CatImageService\\CatImageService.csproj": {
+    "C:\\Users\\Sergey\\Documents\\GitHub\\cat-service\\CatImageService\\CatImageService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danil\\RiderProjects\\CatImageService\\CatImageService\\CatImageService.csproj",
+        "projectUniqueName": "C:\\Users\\Sergey\\Documents\\GitHub\\cat-service\\CatImageService\\CatImageService.csproj",
         "projectName": "CatImageService",
-        "projectPath": "C:\\Users\\danil\\RiderProjects\\CatImageService\\CatImageService\\CatImageService.csproj",
-        "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danil\\RiderProjects\\CatImageService\\CatImageService\\obj\\",
+        "projectPath": "C:\\Users\\Sergey\\Documents\\GitHub\\cat-service\\CatImageService\\CatImageService.csproj",
+        "packagesPath": "C:\\Users\\Sergey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sergey\\Documents\\GitHub\\cat-service\\CatImageService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Sergey\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
