@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PrimeVue + CDN</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+            rel="stylesheet"
+    />
+    <style>
+        html {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: #adadad;
+            font-family: 'Rubik', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            min-width: 70vw;
+            padding: 10px;
+            margin-top: 12vh;
+            max-width: 70vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+
+        .search-title {
+            margin: 7px;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .search-input {
+            min-width: 90%;
+            padding: 7px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .search-button {
+            padding: 9px 17px;
+            border-radius: 5px;
+            border: 1px solid #e0dada;
+            font-size: 16px;
+            transition: 0.5s all;
+        }
+
+        .search-button:hover {
+            background-color: #1dad54;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+    <form @submit.prevent="submitForm" class="container">
+        <h1 class="search-title">Проверь доступность сайта</h1>
+        <input type="text" id="urlInput" name="url" v-model="websiteAddress" class="search-input"/>
+        <button type="submit" class="search-button" @click="checkStatus">Check status</button>
+        <img v-if='statusCode' :src="`https://http.cat/${statusCode}.jpg`" alt="cat"/>
+    </form>
+    
+</div>
+
+<script>
+    const {createApp, ref} = Vue
+
+    const app = createApp({
+        setup() {
+            const websiteAddress = ref('')
+            const statusCode = ref(null)
+
+            const checkStatus = async () => {
+                try {
+                    const response = await fetch(websiteAddress.value, { method: 'HEAD' });
+                    statusCode.value = response.status;
+                } catch (error) {
+                    console.error(error);
+                    statusCode.value = 500;
+                }
+            }
+
+            const submitForm = () => {
+                checkStatus()
+            }
+
+            return {
+                websiteAddress,
+                statusCode,
+                checkStatus,
+                submitForm
+            }
+        }
+    })
+
+    app.mount('#app')
+</script>
+</body>
+</html>

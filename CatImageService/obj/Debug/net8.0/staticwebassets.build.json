@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "W5xtwZSgC0Bztn2tiKj2K0WEUPWAIL/4ucDz4dZr+Xw=",
+  "Hash": "GtqwNZ0G0EpEUnw7zZp8KguqxXILkLm6ySfh36AWgHw=",
   "Source": "CatImageService",
   "BasePath": "_content/CatImageService",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Sergey\\Documents\\GitHub\\cat-service\\CatImageService\\wwwroot\\index.html",
+      "SourceId": "CatImageService",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Sergey\\Documents\\GitHub\\cat-service\\CatImageService\\wwwroot\\",
+      "BasePath": "_content/CatImageService",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
       "Identity": "C:\\Users\\Sergey\\Documents\\GitHub\\cat-service\\CatImageService\\wwwroot\\js\\site.js",
