@@ -8,13 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a795db9d-b449-4166-9838-c4f2cf445019" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CatImageService/wwwroot/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatImageService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatImageService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CatImageService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.staticwebassets.runtime.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/CatImageService.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/CatImageService.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/CatImageService.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/CatImageService.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/CatImageService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/CatImageService.dll" afterDir="false" />
@@ -23,10 +20,7 @@
       <change beforePath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/ref/CatImageService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/ref/CatImageService.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/refint/CatImageService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/refint/CatImageService.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/staticwebassets.build.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/staticwebassets.development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/staticwebassets.pack.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/staticwebassets/msbuild.CatImageService.Microsoft.AspNetCore.StaticWebAssets.props" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/staticwebassets/msbuild.CatImageService.Microsoft.AspNetCore.StaticWebAssets.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CatImageService/wwwroot/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/wwwroot/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719588422851</updated>
       <workItem from="1719588423896" duration="42000" />
-      <workItem from="1720029274200" duration="1701000" />
+      <workItem from="1720029274200" duration="2650000" />
     </task>
     <servers />
   </component>

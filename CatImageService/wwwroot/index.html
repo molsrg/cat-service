@@ -22,11 +22,17 @@
             justify-content: center;
             align-items: center;
         }
+        
+        #app {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            margin-top: 12vh;
+        }
 
         .container {
             min-width: 70vw;
             padding: 10px;
-            margin-top: 12vh;
             max-width: 70vw;
             display: flex;
             justify-content: center;
@@ -62,6 +68,49 @@
         .search-button:hover {
             background-color: #1dad54;
             color: #ffffff;
+
+        }
+
+        img {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        img[src] {
+            opacity: 1;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 70vw;
+            box-sizing: border-box;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        li .url {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        li .status {
+            margin-left: 20px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -71,29 +120,45 @@
 <div id="app">
     <form @submit.prevent="submitForm" class="container">
         <h1 class="search-title">Проверь доступность сайта</h1>
-        <input type="text" id="urlInput" name="url" v-model="websiteAddress" class="search-input"/>
-        <button type="submit" class="search-button" @click="checkStatus">Check status</button>
+        <input type="text" id="urlInput" name="url" placeholder="Enter URL here" v-model="websiteAddress"
+               class="search-input"/>
+        <button type="submit" class="search-button">Check status</button>
         <img v-if='statusCode' :src="`https://http.cat/${statusCode}.jpg`" alt="cat"/>
     </form>
-    
+
+    <div class="container" v-if="history.length">
+        <h2>History</h2>
+        <li v-for="item in history" :key="item.url">
+            {{ item.url }} - {{ item.status }}
+        </li>
+    </div>
+
+
 </div>
 
 <script>
-    const {createApp, ref} = Vue
+    const {createApp, ref, reactive} = Vue
 
     const app = createApp({
         setup() {
             const websiteAddress = ref('')
             const statusCode = ref(null)
+            const history = reactive([])
 
             const checkStatus = async () => {
                 try {
-                    const response = await fetch(websiteAddress.value, { method: 'HEAD' });
+                    const response = await fetch(websiteAddress.value, {method: 'HEAD'});
                     statusCode.value = response.status;
+                    history.push({
+                        url: websiteAddress.value,
+                        status: statusCode.value
+                    })
                 } catch (error) {
                     console.error(error);
                     statusCode.value = 500;
                 }
+
+
             }
 
             const submitForm = () => {
@@ -104,7 +169,8 @@
                 websiteAddress,
                 statusCode,
                 checkStatus,
-                submitForm
+                submitForm,
+                history
             }
         }
     })
