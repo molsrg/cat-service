@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>PrimeVue + CDN</title>
+    <title>Cat service</title>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width"/>
     <!-- <link rel="stylesheet" href="style.css" /> -->
@@ -22,7 +22,7 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         #app {
             display: flex;
             flex-direction: column;
@@ -41,6 +41,10 @@
             flex-wrap: wrap;
 
             gap: 10px;
+        }
+
+        .container > img {
+            max-width: 80%;
         }
 
         .search-title {
@@ -101,17 +105,6 @@
             border-bottom: none;
         }
 
-        li .url {
-            flex: 1;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        li .status {
-            margin-left: 20px;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
@@ -119,19 +112,19 @@
 
 <div id="app">
     <form @submit.prevent="submitForm" class="container">
-        <h1 class="search-title">Проверь доступность сайта</h1>
+        <h1 class="search-title">Check site availability</h1>
         <input type="text" id="urlInput" name="url" placeholder="Enter URL here" v-model="websiteAddress"
                class="search-input"/>
         <button type="submit" class="search-button">Check status</button>
-        <img v-if='statusCode' :src="`https://http.cat/${statusCode}.jpg`" alt="cat"/>
+        <img v-if='catImageUrl' :src="catImageUrl" alt="cat"/>
     </form>
 
-    <div class="container" v-if="history.length">
-        <h2>History</h2>
-        <li v-for="item in history" :key="item.url">
-            {{ item.url }} - {{ item.status }}
-        </li>
-    </div>
+<!--    <div class="container" v-if="history.length">-->
+<!--        <h2>History</h2>-->
+<!--        <li v-for="item in history" :key="item.url">-->
+<!--            {{ item.url }} - {{ item.status }}-->
+<!--        </li>-->
+<!--    </div>-->
 
 
 </div>
@@ -142,24 +135,31 @@
     const app = createApp({
         setup() {
             const websiteAddress = ref('')
-            const statusCode = ref(null)
+            const catImageUrl = ref('');
             const history = reactive([])
 
             const checkStatus = async () => {
                 try {
-                    const response = await fetch(websiteAddress.value, {method: 'HEAD'});
-                    statusCode.value = response.status;
+                    const response = await fetch(`http://localhost:5000/Url?url=${encodeURIComponent(websiteAddress.value)}`);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const blob = await response.blob();
+                    const imageUrl = URL.createObjectURL(blob);
+                    catImageUrl.value = imageUrl;
                     history.push({
                         url: websiteAddress.value,
-                        status: statusCode.value
-                    })
+                        status: response.status
+                    });
                 } catch (error) {
                     console.error(error);
-                    statusCode.value = 500;
+                    history.push({
+                        url: websiteAddress.value,
+                        status: 'Error'
+                    });
                 }
+            };
 
-
-            }
 
             const submitForm = () => {
                 checkStatus()
@@ -167,7 +167,7 @@
 
             return {
                 websiteAddress,
-                statusCode,
+                catImageUrl,
                 checkStatus,
                 submitForm,
                 history
