@@ -20,7 +20,6 @@ namespace CatImageService.Controllers
         }
 
         [HttpGet]
-        [HttpGet]
         public async Task<IActionResult> GetCatImage([FromQuery] string url)
         {
             if (string.IsNullOrEmpty(url))
@@ -33,7 +32,7 @@ namespace CatImageService.Controllers
                 var response = await _httpClient.GetAsync(url);
                 int statusCode = (int)response.StatusCode;
 
-                // Проверка, является ли URL ссылкой на изображение
+                // Если ответ содержит изображение, возвращаем его
                 if (response.Content.Headers.ContentType.MediaType.StartsWith("image"))
                 {
                     var originalImageBytes = await response.Content.ReadAsByteArrayAsync();
@@ -54,7 +53,18 @@ namespace CatImageService.Controllers
             }
             catch (HttpRequestException ex)
             {
-                return StatusCode(500, $"Error making HTTP request: {ex.Message}");
+                // Обработка ошибок HTTP-запроса и возврат картинки с котиком в зависимости от статус-кода ошибки
+                int errorCode = ex.StatusCode.HasValue ? (int)ex.StatusCode.Value : 500;
+                byte[] catImageBytes = await GetCatImageBytes(errorCode.ToString());
+
+                return File(catImageBytes, "image/jpeg");
+            }
+            catch (Exception ex)
+            {
+                // Общая обработка ошибок и возврат картинки с котиком для статус-кода 500
+                byte[] catImageBytes = await GetCatImageBytes("500");
+
+                return File(catImageBytes, "image/jpeg");
             }
         }
 

@@ -101,7 +101,7 @@
                     const imageUrl = URL.createObjectURL(blob)
                     catImageUrl.value = imageUrl
                 } catch (error) {
-                    catImageUrl.value = 'https://http.cat/500'
+                    console.error(error)
                 }
             }
 
