@@ -4,7 +4,6 @@
     <title>Cat service</title>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width"/>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
@@ -38,8 +37,6 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            flex-wrap: wrap;
-
             gap: 10px;
         }
 
@@ -72,37 +69,6 @@
         .search-button:hover {
             background-color: #1dad54;
             color: #ffffff;
-
-        }
-
-        img {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        img[src] {
-            opacity: 1;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 20px;
-            width: 100%;
-            max-width: 70vw;
-            box-sizing: border-box;
-        }
-
-        li {
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        li:last-child {
-            border-bottom: none;
         }
 
     </style>
@@ -121,29 +87,23 @@
 </div>
 
 <script>
-    const {createApp, ref, reactive} = Vue
+    const {createApp, ref} = Vue
 
     const app = createApp({
         setup() {
             const websiteAddress = ref('')
-            const catImageUrl = ref('');
-            const history = reactive([])
+            const catImageUrl = ref('')
 
             const checkStatus = async () => {
                 try {
-                    const response = await fetch(`http://localhost:5000/Url?url=${encodeURIComponent(websiteAddress.value)}`);
-                    const blob = await response.blob();
-                    const imageUrl = URL.createObjectURL(blob);
-                    catImageUrl.value = imageUrl;
-
+                    const response = await fetch(`http://localhost:5000/Url?url=${encodeURIComponent(websiteAddress.value)}`)
+                    const blob = await response.blob()
+                    const imageUrl = URL.createObjectURL(blob)
+                    catImageUrl.value = imageUrl
                 } catch (error) {
-                    console.log(1)
-                    console.error(error);
-
-
+                    catImageUrl.value = 'https://http.cat/500'
                 }
-            };
-
+            }
 
             const submitForm = () => {
                 checkStatus()
@@ -152,9 +112,7 @@
             return {
                 websiteAddress,
                 catImageUrl,
-                checkStatus,
-                submitForm,
-                history
+                submitForm
             }
         }
     })
