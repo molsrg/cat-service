@@ -118,15 +118,6 @@
         <button type="submit" class="search-button">Check status</button>
         <img v-if='catImageUrl' :src="catImageUrl" alt="cat"/>
     </form>
-
-<!--    <div class="container" v-if="history.length">-->
-<!--        <h2>History</h2>-->
-<!--        <li v-for="item in history" :key="item.url">-->
-<!--            {{ item.url }} - {{ item.status }}-->
-<!--        </li>-->
-<!--    </div>-->
-
-
 </div>
 
 <script>
@@ -141,22 +132,15 @@
             const checkStatus = async () => {
                 try {
                     const response = await fetch(`http://localhost:5000/Url?url=${encodeURIComponent(websiteAddress.value)}`);
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
                     const blob = await response.blob();
                     const imageUrl = URL.createObjectURL(blob);
                     catImageUrl.value = imageUrl;
-                    history.push({
-                        url: websiteAddress.value,
-                        status: response.status
-                    });
+
                 } catch (error) {
+                    console.log(1)
                     console.error(error);
-                    history.push({
-                        url: websiteAddress.value,
-                        status: 'Error'
-                    });
+
+
                 }
             };
 

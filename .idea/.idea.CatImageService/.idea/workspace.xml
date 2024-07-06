@@ -9,8 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a795db9d-b449-4166-9838-c4f2cf445019" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatImageService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatImageService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CatImageService/Controllers/UrlController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/Controllers/UrlController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CatImageService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.pdb" afterDir="false" />
@@ -23,7 +21,6 @@
       <change beforePath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/ref/CatImageService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/ref/CatImageService.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/refint/CatImageService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/refint/CatImageService.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/wwwroot/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/wwwroot/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +29,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d3a451850004403293b134b9fe18ce3fc8f920/ae/691f34fb/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -93,6 +93,8 @@
       <workItem from="1719588423896" duration="42000" />
       <workItem from="1720029274200" duration="3510000" />
       <workItem from="1720080359505" duration="791000" />
+      <workItem from="1720252968992" duration="944000" />
+      <workItem from="1720253941170" duration="117000" />
     </task>
     <servers />
   </component>
