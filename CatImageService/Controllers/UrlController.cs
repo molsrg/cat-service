@@ -13,9 +13,13 @@ namespace CatImageService.Controllers
         private readonly HttpClient _httpClient;
         private readonly IMemoryCache _cache;
 
-        public UrlController(HttpClient httpClient, IMemoryCache cache)
+        public UrlController(IMemoryCache cache)
         {
-            _httpClient = httpClient;
+            var handler = new HttpClientHandler
+            {
+                AllowAutoRedirect = false
+            };
+            _httpClient = new HttpClient(handler);
             _cache = cache;
         }
 

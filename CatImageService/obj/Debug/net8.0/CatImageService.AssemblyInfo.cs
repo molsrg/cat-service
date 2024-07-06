@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CatImageService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+408c66249907c45ff218346265c16ff6f926c6e4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5a9bc9095af1e0485557efb77a72870b819d025")]
 [assembly: System.Reflection.AssemblyProductAttribute("CatImageService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CatImageService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

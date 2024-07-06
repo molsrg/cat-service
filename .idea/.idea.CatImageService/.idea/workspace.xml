@@ -8,7 +8,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a795db9d-b449-4166-9838-c4f2cf445019" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CatImageService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatImageService/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/Controllers/UrlController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/Controllers/UrlController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/bin/Debug/net8.0/CatImageService.exe" afterDir="false" />
@@ -21,7 +20,6 @@
       <change beforePath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/ref/CatImageService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/ref/CatImageService.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/refint/CatImageService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/obj/Debug/net8.0/refint/CatImageService.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CatImageService/wwwroot/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/CatImageService/wwwroot/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +96,7 @@
       <workItem from="1720253941170" duration="117000" />
       <workItem from="1720254222178" duration="494000" />
       <workItem from="1720255349060" duration="139000" />
+      <workItem from="1720255806269" duration="65000" />
     </task>
     <servers />
   </component>
